@@ -1,5 +1,5 @@
 # Predicting the Topic of the Text Report
-Author: HVAInternational (Pham Dang Hung, Pham Ha Khanh Chi, Le Xuan Trong, and Le Ky Nam)
+Author: HVAInternational (Pham Dang Hung, Pham Ha Khanh Chi, Le Xuan Trong, and Le Ky Nam)  
 Web link: https://github.com/Rinho4444/Predicting-the-topic-of-the-text/blob/main/report.md
 
 ## 1. Abstract
