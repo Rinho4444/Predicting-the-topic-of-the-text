@@ -1,4 +1,4 @@
-# Predicting the topic of the text report
+![distribution_of_categories_after_preprocessing](https://github.com/user-attachments/assets/3db1096b-aa48-4032-b98d-1ab4b9f98aed)# Predicting the topic of the text report
 Author: HVAInternational (Pham Dang Hung, Pham Ha Khanh Chi, Le Xuan Trong, and Le Ky Nam)
 
 ## 1. Abstract
@@ -22,55 +22,56 @@ The data set that we used was **20newsgroups** provided by our teachers at the A
 ### 3.2 Exploratory Data Analysis (EDA) 
 To understand our dataset better and prepare it for modeling, we conducted several visual analyses:
 
-#### ...
+#### Distribution of categories before preprocessing
+![distribution_of_categories_before_preprocessing](https://github.com/user-attachments/assets/9f2340d1-cca9-4cde-bd94-43a42d6784b8)
 
 ##### Comments:
 - The class distribution is relatively balance (750-820).
 - However, there’s classes like “talk.religion.misc” that only have about 500. This could cause the model to have bias.
 - The difference, though, is not that high. For tree-based model, this should be a problem. But, if using SVM or Logistic Regression, then we had to apply class weight.
 
-#### ...
+#### Token length before preprocessing
 
 ##### Comments:
 - Most of the token length concentrated around 0-1000
 - Most text are relatively short though there are extreme outliers that led up to 80000
 - To combat this we may preprocess the data(removing tags, stopwords,...) or directly remove outliers.
 
-#### ...
+#### Word cloud
 
 ##### Comments:
 - We create word cloud image for each class(these are some example) to figure out some category-specific words/
 - Like in “rec.sport.hockey” has game, team that has a large frequency
 - We will also use this to find relative words that may cause noise so we could add to custom_stopwords, like “subject” appears in 4 pictures here with a relative frequency.
 
-#### ...
+#### Top 20 most common words
 
 ##### Comments:
 - We print out common words then
 - Clearly, the common words now are quite generic: like, one, dont, get, x, also, would,...
 - We would add this to the `custom_stopword` to prevent noise.
 
-#### ...
+#### Top 20 most common bigrams
 
 ##### Comments:
 - There are some unmeaningful bigram like: ax ax, ac uk, don know, cmu edu, netcom com,... That needs to be remove
 - But there are also some useful: mit edu(science relate), nasa gov(sci.space relate), ax max(appear a lot in comp.os.ms-window.misc)
 
-#### ...
+#### Histogram of token lengths
 
 ##### Comments:
 - The token length are still highly concentrated around 0-1000.
 - But the extreme has relatively been remove with the longest to around 6000 to not risk losing importance context we will keep these.
 
 
-#### ...
+#### Distribution of categories
 
 ##### Comments:
 - We were worry that the aggressive preprocessing would affect the distribution but the trend seems to maintain.
 - The lowest with around 500 text and the highest about 820.
 
 
-#### ...
+#### Top 25 correlated words
 
 ##### Comments:
 - This is the top word with high correlation to a category.
