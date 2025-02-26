@@ -1,4 +1,4 @@
-![distribution_of_categories_after_preprocessing](https://github.com/user-attachments/assets/3db1096b-aa48-4032-b98d-1ab4b9f98aed)# Predicting the topic of the text report
+# Predicting the topic of the text report
 Author: HVAInternational (Pham Dang Hung, Pham Ha Khanh Chi, Le Xuan Trong, and Le Ky Nam)
 
 ## 1. Abstract
@@ -22,7 +22,7 @@ The data set that we used was **20newsgroups** provided by our teachers at the A
 ### 3.2 Exploratory Data Analysis (EDA) 
 To understand our dataset better and prepare it for modeling, we conducted several visual analyses:
 
-#### Distribution of categories before preprocessing
+#### Distribution of categories before preprocessing before preprocessing
 ![distribution_of_categories_before_preprocessing](https://github.com/user-attachments/assets/9f2340d1-cca9-4cde-bd94-43a42d6784b8)
 
 ##### Comments:
@@ -30,48 +30,55 @@ To understand our dataset better and prepare it for modeling, we conducted sever
 - However, there’s classes like “talk.religion.misc” that only have about 500. This could cause the model to have bias.
 - The difference, though, is not that high. For tree-based model, this should be a problem. But, if using SVM or Logistic Regression, then we had to apply class weight.
 
-#### Token length before preprocessing
+#### Token length before preprocessing before preprocessing
+![token_length_before_preprocessing](https://github.com/user-attachments/assets/074274ca-69bb-419e-9d7a-2cb33f5ffc48)
 
 ##### Comments:
 - Most of the token length concentrated around 0-1000
 - Most text are relatively short though there are extreme outliers that led up to 80000
 - To combat this we may preprocess the data(removing tags, stopwords,...) or directly remove outliers.
 
-#### Word cloud
+#### Word cloud before preprocessing
+![word_clouds](https://github.com/user-attachments/assets/060ce787-5244-413f-888c-8af925f76f67)
 
 ##### Comments:
 - We create word cloud image for each class(these are some example) to figure out some category-specific words/
 - Like in “rec.sport.hockey” has game, team that has a large frequency
 - We will also use this to find relative words that may cause noise so we could add to custom_stopwords, like “subject” appears in 4 pictures here with a relative frequency.
 
-#### Top 20 most common words
+#### Top 20 most common words before preprocessing
+![top_20_common_words_before_preprocessing](https://github.com/user-attachments/assets/4760f74f-1d18-4003-98d3-3cc7e3230ad0)
 
 ##### Comments:
 - We print out common words then
 - Clearly, the common words now are quite generic: like, one, dont, get, x, also, would,...
 - We would add this to the `custom_stopword` to prevent noise.
 
-#### Top 20 most common bigrams
+#### Top 20 most common bigrams before preprocessing
+![top_20_most_common_bigrams](https://github.com/user-attachments/assets/f0800fab-0f4e-4a14-b3df-1dbfb6f38608)
 
 ##### Comments:
 - There are some unmeaningful bigram like: ax ax, ac uk, don know, cmu edu, netcom com,... That needs to be remove
 - But there are also some useful: mit edu(science relate), nasa gov(sci.space relate), ax max(appear a lot in comp.os.ms-window.misc)
 
-#### Histogram of token lengths
+#### Histogram of token lengths after preprocessing
+![token_length_after_preprocessing](https://github.com/user-attachments/assets/b3a7bffb-e244-44e4-ac9b-7bc58152f53e)
 
 ##### Comments:
 - The token length are still highly concentrated around 0-1000.
 - But the extreme has relatively been remove with the longest to around 6000 to not risk losing importance context we will keep these.
 
 
-#### Distribution of categories
+#### Distribution of categories after preprocessing
+![token_length_after_preprocessing](https://github.com/user-attachments/assets/b5e52797-8876-4e0c-8b64-25fc0f2a9c42)
 
 ##### Comments:
 - We were worry that the aggressive preprocessing would affect the distribution but the trend seems to maintain.
 - The lowest with around 500 text and the highest about 820.
 
 
-#### Top 25 correlated words
+#### Top 25 correlated words after preprocessing
+![top_25_correlated words](https://github.com/user-attachments/assets/97902b4a-fee7-4926-af4a-756ed611a47c)
 
 ##### Comments:
 - This is the top word with high correlation to a category.
