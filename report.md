@@ -2,7 +2,7 @@
 Author: HVAInternational (Pham Dang Hung, Pham Ha Khanh Chi, Le Xuan Trong, and Le Ky Nam)
 
 ## 1. Abstract
-This project aims to accurately predict the topic of the text using NLP. We utilize _____ for model optimization. Our approach improves on baseline models, achieving a higher Marco F1 score and better generalization. 
+This project aims to accurately predict the topic of the text using NLP. We utilize Autogluon, with vectorization by BoW Bigram `max_features` = 18500, for model optimization. Our approach improves on baseline models, achieving a higher Marco F1 score and better generalization. 
 
 ## 2. Introduction
 This project was initially developed as an assignment for the AI4B class, where we were tasked with building a predictive model for the topic of the text. While fulfilling the course requirements, our team recognized the broader significance of this problem in the real industry. _____________.
@@ -111,15 +111,21 @@ With the best model from AutoGluon, we continued to test it with different types
 
 | Model | Macro F1 score on Validation set | Macro F1 score on Test set | 
 |---------|------|------|
+| XGBoost + BoW Bigram 7500 | 0.85 | 0.7532 |
+| XGBoost + BoW Bigram 7500 | 0.8513 | 0.7578 |
+| CNN | 0.8729 (average over 5 runs) | 0.7529 (average over 5 runs) |
+| FCNN (1 dense layer) | 0.8654 (average over 5 runs) | 0.7621 (average over 5 runs) |
+| FCNN (2 dense layers) | 0.8462 (average over 5 runs) | 0.7217 (average over 5 runs) |
 | Autogluon + BoW Trigram 10000 | 0.9063 | 0.8223 |
 | Autogluon + BoW Bigram 7500 | 0.9053 | 0.8182 |
 | Autogluon + BoW Bigram 10000 | 0.9085 | 0.8254 |
-| Autogluon + BoW Bigram 12500 | 0.9105 | 0.8292
-| Autogluon + BoW Bigram 15000 | 188172 | 
-| **LightGBM** | **169731** | 
+| Autogluon + BoW Bigram 12500 | 0.9105 | 0.8292 |
+| Autogluon + BoW Bigram 15000 | 0.9146 | 0.8362 |
+| Autogluon + BoW Bigram 17500 | 0.9149 | 0.8421 |
+| **Autogluon + BoW Bigram 18500** | **0.9145** | **0.8425** |
 
 ## 6. Conclusion
-______ successfully optimized performance, achieving higher accuracy than traditional models. This project can be expanded by collecting more data or deploying model and making it a real online tool.
+Autogluon, with vectorization by BoW Bigram `max_features` = 18500, successfully optimized performance, achieving higher accuracy than traditional models. This project can be expanded by collecting more data or deploying model and making it a real online tool.
 
 
 
