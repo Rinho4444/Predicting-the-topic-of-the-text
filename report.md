@@ -1,5 +1,6 @@
 # Predicting the Topic of the Text Report
 Author: HVAInternational (Pham Dang Hung, Pham Ha Khanh Chi, Le Xuan Trong, and Le Ky Nam)
+Web link: https://github.com/Rinho4444/Predicting-the-topic-of-the-text/blob/main/report.md
 
 ## 1. Abstract
 This project aims to accurately predict the topic of text using NLP. We utilize AutoGluon, with vectorization by BoW Bigram (`max_features = 18500`), for model optimization. Our approach improves on baseline models, achieving a higher Macro F1 score and better generalization.
