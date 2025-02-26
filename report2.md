@@ -87,13 +87,14 @@ We used [AutoGluon for text](https://auto.gluon.ai/stable/tutorials/multimodal/t
 
 ## 5. Model Results
 
-| Model | Macro F1 Score (Validation) | Macro F1 Score (Test) | Training Time |
+| Model | Macro F1 Score (Validation) | Macro F1 Score (Test) |
 |---------|------|------|------|
-| XGBoost + BoW Bigram 7500 | 0.85 | 0.7532 | - |
-| CNN | 0.8729 (avg over 5 runs) | 0.7529 (avg over 5 runs) | - |
-| FCNN (1 dense layer) | 0.8654 (avg over 5 runs) | 0.7621 (avg over 5 runs) | - |
-| AutoGluon + BoW Bigram 18500 | **0.9145** | **0.8425** | - |
+| XGBoost + BoW Bigram 7500 | 0.85 | 0.7532 | 
+| CNN | 0.8729 (avg over 5 runs) | 0.7529 (avg over 5 runs) | 
+| FCNN (1 dense layer) | 0.8654 (avg over 5 runs) | 0.7621 (avg over 5 runs) | 
+| AutoGluon + BoW Bigram 18500 | **0.9145** | **0.8425** | 
 
+*Note: We didn't include other models combining with other preprocessing ways in this table because their results are very bad*
 ## 6. Conclusion
 AutoGluon, with BoW Bigram (`max_features = 18500`), successfully optimized performance, achieving higher accuracy than traditional models. Future directions include:
 - Expanding the dataset for improved generalization.
