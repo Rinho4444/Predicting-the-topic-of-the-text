@@ -109,6 +109,7 @@ With the best model from AutoGluon, we continued to test it with different types
 ## 5. Model Results
 
 ## 6. Conclusion
+______ successfully optimized performance, achieving higher accuracy than traditional models. This project can be expanded by collecting more data or deploying model and making it a real online tool.
 
 
 
