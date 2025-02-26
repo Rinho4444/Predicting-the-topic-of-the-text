@@ -12,6 +12,7 @@ To create the best project, the team members were encouraged to optimise their t
 - Building and Optimising the models: Le Ky Nam
 - Writing the report: Le Xuan Trong
 - Finding documents: Pham Dang Hung
+
 Each task was completed successfully by not just the assigned member but also by the help of the whole team during the process. The AIM for this project was for us to successfully build a model by the information given, applying all the knowledge we had been taught in AI4B class. Plus, we also learned teamwork and communication skills to be able to solve any bugs, obstacles or, problems passing by during the process.
 
 
@@ -107,6 +108,15 @@ We used [AutoGluon for text](https://auto.gluon.ai/stable/tutorials/multimodal/t
 With the best model from AutoGluon, we continued to test it with different types of data, and it successfully outplays any other models. 
 
 ## 5. Model Results
+
+| Model | Macro F1 score on Validation set | Macro F1 score on Test set | 
+|---------|------|------|
+| Autogluon + BoW Trigram 10000 | 0.9063 | 0.8223 |
+| Autogluon + BoW Bigram 7500 | 0.9053 | 0.8182 |
+| Autogluon + BoW Bigram 10000 | 0.9085 | 0.8254 |
+| Autogluon + BoW Bigram 12500 | 0.9105 | 0.8292
+| Autogluon + BoW Bigram 15000 | 188172 | 
+| **LightGBM** | **169731** | 
 
 ## 6. Conclusion
 ______ successfully optimized performance, achieving higher accuracy than traditional models. This project can be expanded by collecting more data or deploying model and making it a real online tool.
